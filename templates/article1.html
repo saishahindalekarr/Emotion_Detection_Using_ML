@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health & Emotions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article1.css') }}">
+    <script defer src="{{ url_for('static', filename='js/article1.js') }}"></script>
+</head>
+<body>
+
+    <nav>
+        <a href="{{ url_for('index') }}" class="home-link">Home</a>
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </nav>
+
+    <header class="header">
+        <h1>Understanding Mental Health & Emotions</h1>
+        <p>Explore the depths of your mind, emotions, and well-being.</p>
+    </header>
+
+    <main class="article-container">
+        <!-- Section 1 -->
+        <section class="article-section">
+            <h2>🧠 What is Mental Health?</h2>
+            <p>Mental health is the foundation of our emotional, psychological, and social well-being. It affects how we think, feel, and behave in daily life. It also determines how we handle stress, relate to others, and make decisions.</p>
+            <button class="read-more" data-target="article1">Read More</button>
+            <div id="article1" class="expanded-article">
+                <p>Good mental health is not just the absence of mental illness but also the ability to cope with life's challenges. Factors like genetics, life experiences, and environment play a role in shaping our mental health.</p>
+                <button class="close-article">Close</button>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="article-section">
+            <h2>💡 Understanding Emotions</h2>
+            <p>Emotions are our body's natural response to situations. They help us connect with others, make decisions, and navigate life.</p>
+            <button class="read-more" data-target="article2">Read More</button>
+            <div id="article2" class="expanded-article">
+                <p>Emotions can be categorized into primary (happiness, sadness, anger, fear, surprise, and disgust) and secondary emotions (pride, jealousy, guilt, etc.). Understanding emotions can help us process them in a healthier way.</p>
+                <button class="close-article">Close</button>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="article-section">
+            <h2>🌿 How to Take Care of Your Mental Health</h2>
+            <p>Taking care of mental health is just as important as physical health. Small habits can make a big difference.</p>
+            <button class="read-more" data-target="article3">Read More</button>
+            <div id="article3" class="expanded-article">
+                <ul>
+                    <li>🛌 Get enough sleep (7-9 hours)</li>
+                    <li>🏃 Exercise regularly</li>
+                    <li>🥗 Eat a balanced diet</li>
+                    <li>🎧 Listen to calming music</li>
+                    <li>🧘 Practice mindfulness and deep breathing</li>
+                    <li>💬 Talk to someone you trust</li>
+                </ul>
+                <button class="close-article">Close</button>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="article-section">
+            <h2>🔹 When to Seek Help?</h2>
+            <p>It’s okay to seek help when emotions feel overwhelming. Mental health professionals can provide guidance.</p>
+            <button class="read-more" data-target="article4">Read More</button>
+            <div id="article4" class="expanded-article">
+                <p>Signs you may need professional help:</p>
+                <ul>
+                    <li>⚡ Feeling constantly anxious, sad, or hopeless</li>
+                    <li>😞 Loss of interest in activities you once enjoyed</li>
+                    <li>🍽️ Changes in eating or sleeping habits</li>
+                    <li>😔 Difficulty concentrating or making decisions</li>
+                    <li>🚨 Thoughts of self-harm or suicide</li>
+                </ul>
+                <p>Reaching out for support is a sign of strength, not weakness. Therapy, counseling, and support groups can be helpful.</p>
+                <button class="close-article">Close</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Need more support? Visit <a href="https://www.nimh.nih.gov/health">National Institute of Mental Health</a></p>
+    </footer>
+
+</body>
+</html>

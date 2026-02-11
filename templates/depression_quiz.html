@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+</head>
+<body>
+
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+    </nav>
+
+    <header class="quiz-header">
+        <h1>😞 Depression Self-Assessment</h1>
+        <p>Understand your emotional well-being</p>
+    </header>
+
+    <main class="quiz-container">
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Have you felt hopeless or extremely sad recently?</p>
+                <label><input type="radio" name="q1" value="often"> Often</label>
+                <label><input type="radio" name="q1" value="sometimes"> Sometimes</label>
+                <label><input type="radio" name="q1" value="rarely"> Rarely</label>
+            </div>
+
+            <div class="question">
+                <p>2. How often do you feel tired without physical exertion?</p>
+                <input type="range" id="q2" name="q2" min="1" max="10" value="5">
+                <span id="q2-value">5</span>
+            </div>
+
+            <div class="question">
+                <p>3. What is one thing that has recently made you feel good?</p>
+                <input type="text" name="q3">
+            </div>
+
+            <button type="button" onclick="calculateResults()">Get Results</button>
+        </form>
+
+        <div id="quiz-result"></div>
+    </main>
+
+</body>
+</html>

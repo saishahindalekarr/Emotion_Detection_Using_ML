@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathing Exercise</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/breathing.js') }}"></script>
+</head>
+<body>
+
+    <nav>
+        <a href="{{ url_for('index') }}" class="home-link">Home</a>
+        <a href="{{ url_for('quiz') }}" class="home-link">Back to Quizzes</a>
+    </nav>
+
+    <div class="breathing-container">
+        <h2>Take a Deep Breath🌿</h2>
+        <p>Follow the guide to calm your mind.</p>
+
+        <div class="breathing-circle">
+            <p id="breathing-text">Get Ready...</p>
+        </div>
+
+        <button id="start-breathing">Start Exercise</button>
+    </div>
+
+</body>
+</html>

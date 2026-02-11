@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Chat with Our AI</h1> -->
+
+    <!-- ✅ Close button to close the pop-up
+    <button onclick="window.close()">← Close Chatbot</button> -->
+
+    <!-- Chatbot iframe -->
+
+    <!-- <iframe
+    src="https://www.chatbase.co/chatbot-iframe/RiKBXgWSmkbtLucFz7a25"
+    width="100%"
+    style="height: 100%; min-height: 700px"
+    frameborder="0">
+    </iframe>
+     -->
+    <!-- this below code is no longer in use -->
+    <!-- <a href="/index.html"> ← Back to Home</a> -->
+
+
+    <!-- <a href="{{ url_for('index') }}">← Back to Home</a>  ✅ Flask Dynamic URL -->
+
+<!-- </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .chatbot-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        iframe {
+            width: 80%; /* ✅ Reduce width */
+            height: 500px; /* ✅ Set a fixed height */
+            border-radius: 10px; /* Optional: Add rounded corners */
+            border: 2px solid #ccc; /* Optional: Add border for better look */
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+
+        button, a {
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover, a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-container">
+        <h1>Chat with Our AI</h1>
+
+        <iframe
+            src="https://www.chatbase.co/chatbot-iframe/RiKBXgWSmkbtLucFz7a25"
+            frameborder="0">
+        </iframe>
+
+        <div class="buttons">
+            <button onclick="window.close()">← Close Chatbot</button>  <!-- Close pop-up -->
+            <a href="{{ url_for('index') }}"> ← Back to Home</a>  <!-- Flask Dynamic URL -->
+        </div>
+    </div>
+</body>
+</html>

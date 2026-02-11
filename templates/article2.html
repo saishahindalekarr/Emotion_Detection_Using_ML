@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Management Articles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article2.css') }}">
+</head>
+<body>
+
+    <nav>
+        <!-- <a href="{{ url_for('index') }}" class="home-link">Home</a>
+        <a href="#" id="dark-mode-toggle">Dark Mode</a> -->
+
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('quiz') }}">Music & Mood</a>
+            <button id="dark-mode-toggle">Dark Mode</button>
+
+    </nav>
+
+    <header>
+        <h1>Find Your Calm🧘</h1>
+        <p>Explore mindful strategies for a stress-free life.</p>
+    </header>
+
+    <!-- Article Cards Section -->
+    <section class="article-grid">
+        <div class="article-card">
+            <!-- <img src="{{ url_for('static', filename='images/mindfulness.jpg') }}" alt="Mindfulness"> -->
+            <h3> Mindfulness & Meditation</h3>
+            <p>Learn how to stay present and reduce anxiety...</p>
+            <button class="read-more" data-target="article1">Read More</button>
+        </div>
+
+        <div class="article-card">
+            <!-- <img src="{{ url_for('static', filename='images/sleep.jpg') }}" alt="Better Sleep"> -->
+            <h3> Sleep Your Stress Away</h3>
+            <p>Discover how quality sleep improves mental health...</p>
+            <button class="read-more" data-target="article2">Read More</button>
+        </div>
+
+        <div class="article-card">
+            <!-- <img src="{{ url_for('static', filename='images/music.jpg') }}" alt="Music Therapy"> -->
+            <h3> Music Therapy & Relaxation</h3>
+            <p>Use sound to heal stress and elevate mood...</p>
+            <button class="read-more" data-target="article3">Read More</button>
+        </div>
+    </section>
+
+    <!-- Full Article Section (Initially Hidden) -->
+    <section class="full-articles">
+        <article id="article1" class="hidden">
+            <h2> Mindfulness & Meditation</h2>
+            <p>Mindfulness is the practice of being fully present and aware...</p>
+            <button class="close-article">Close</button>
+        </article>
+
+        <article id="article2" class="hidden">
+            <h2> Sleep Your Stress Away</h2>
+            <p>Quality sleep is crucial for managing stress...</p>
+            <button class="close-article">Close</button>
+        </article>
+
+        <article id="article3" class="hidden">
+            <h2> Music Therapy & Relaxation</h2>
+            <p>Listening to calming music can lower stress hormones...</p>
+            <button class="close-article">Close</button>
+        </article>
+    </section>
+
+    <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+
+    <script src="{{ url_for('static', filename='js/article.js') }}"></script>
+
+</body>
+</html>

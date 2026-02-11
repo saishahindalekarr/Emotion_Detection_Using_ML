@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Assessment Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+</head>
+<body>
+
+    <nav>
+        <a href="{{ url_for('index') }}" class="home-link">Home</a>
+        <a href="{{ url_for('breathing') }}" class="home-link">Try Breathing Exercise 🌿</a>
+    </nav>
+
+    <div class="quiz-container">
+        <h2>Self-Assessment Quiz 🤔</h2>
+        <p>Answer the following questions honestly to gain insight into your mental state.</p>
+
+        <form id="quiz-form">
+            <!-- Question 1 -->
+            <div class="quiz-question">
+                <p>1️⃣ How often do you feel overwhelmed by stress?</p>
+                <label><input type="radio" name="q1" value="high"> Very Often</label>
+                <label><input type="radio" name="q1" value="medium"> Sometimes</label>
+                <label><input type="radio" name="q1" value="low"> Rarely</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-question">
+                <p>2️⃣ Do you experience frequent mood swings?</p>
+                <label><input type="radio" name="q2" value="high"> Yes, frequently</label>
+                <label><input type="radio" name="q2" value="medium"> Occasionally</label>
+                <label><input type="radio" name="q2" value="low"> No,hardly</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-question">
+                <p>3️⃣ How well do you sleep at night?</p>
+                <label><input type="radio" name="q3" value="high"> Poorly (frequent waking up, trouble falling asleep)</label>
+                <label><input type="radio" name="q3" value="medium"> Sometimes okay</label>
+                <label><input type="radio" name="q3" value="low"> I sleep well</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="quiz-question">
+                <p>4️⃣ Do you find it hard to concentrate on tasks?</p>
+                <label><input type="radio" name="q4" value="high"> Yes, most of the time</label>
+                <label><input type="radio" name="q4" value="medium"> Occasionally</label>
+                <label><input type="radio" name="q4" value="low"> No, I can focus well</label>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="quiz-question">
+                <p>5️⃣ How often do you feel lonely or isolated?</p>
+                <label><input type="radio" name="q5" value="high"> Very Often</label>
+                <label><input type="radio" name="q5" value="medium"> Sometimes</label>
+                <label><input type="radio" name="q5" value="low"> Rarely</label>
+            </div>
+
+            <button type="button" id="submit-quiz">Get Results</button>
+        </form>
+
+        <div id="quiz-results" class="results-container">
+            <h3>Your Mental Well-Being Status</h3>
+            <p id="quiz-feedback"></p>
+
+            <div id="music-recommendation">
+                <h4>🎵 Music & Video Therapy 🎵</h4>
+                <p>Based on your responses, here’s something to help you feel better!</p>
+                <iframe id="music-frame" width="300" height="150" style="border-radius:12px;"></iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

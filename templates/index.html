@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <nav>
+        <div class="left-section">
+            <div class="dropdown">
+                <button class="dropbtn">Articles ▼</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('article1') }}"> Mental Health & Emotions</a>
+                    <a href="{{ url_for('article2') }}"> Stress Management</a>
+                    <a href="https://www.helpguide.org/articles/stress/stress-management.htm" target="_blank">External Resource</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="right-section">
+            <button id="breathe-btn">Breathe</button>
+            <button id="quiz-btn">VibeCheck</button>
+            <button id="chatbot-btn">Chatbot</button>
+            
+        </div>
+    </nav>
+    
+<!-- original code for webcam -->
+
+    <!-- <div class="container">
+        <h2>Real-Time Emotion Detection</h2>
+        <div class="webcam-container">
+            <img id="webcam-feed" src="{{ url_for('video_feed') }}" alt="Webcam Feed">
+        </div>
+    </div> -->
+
+    <!-- new code for webcam with a toggle button -->
+    <div class="container">
+        <h2>Real-Time Emotion Detector</h2>
+        <div class="webcam-container" id="webcam-container" style="display: none;">
+            <!-- <img id="webcam-feed" src="{{ url_for('video_feed') }}" alt="Webcam Feed"> -->
+            <img id="webcam-feed" src="" alt="Webcam Feed">
+        </div>
+        <button id="toggle-webcam">Start Webcam</button>
+    </div>
+    
+    <!-- <script>
+        // Open chatbot.html in a new tab when clicking the button
+        document.getElementById("chatbot-btn").addEventListener("click", function () {
+            window.open("/chatbot.html", "_blank");
+        });
+    </script> -->
+
+    <!-- <script>
+        document.getElementById("chatbot-btn").addEventListener("click", function () {
+            window.open("{{ url_for('chatbot') }}", "_blank");  // ✅ Flask Dynamic URL
+        });
+    </script> -->
+
+    <script>
+        document.getElementById("chatbot-btn").addEventListener("click", function () {
+            window.open("{{ url_for('chatbot') }}", "Chatbot", "width=500,height=600");  // ✅ Opens a small pop-up window
+        });
+
+        // Navigate to the Quiz page
+        document.getElementById("quiz-btn").addEventListener("click", function () {
+        window.location.href = "{{ url_for('quiz') }}";
+         });
+
+         // Add Breathe button functionality
+        document.getElementById("breathe-btn").addEventListener("click", function () {
+        window.open("{{ url_for('breathing') }}", "Breathe", "width=500,height=600");  // ✅ Opens breathing page in a pop-up
+    });
+
+         
+
+    </script>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html
